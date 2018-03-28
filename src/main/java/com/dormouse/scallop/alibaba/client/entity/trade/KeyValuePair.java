@@ -1,13 +1,17 @@
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
 package com.dormouse.scallop.alibaba.client.entity.trade;
 
 import java.io.Serializable;
 
+
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/30 下午9:31
- * todo  :
+ * The type Key value pair.
+ *
+ * @author yunan.zhang
+ * @version 0.0.1
  */
 public class KeyValuePair implements Serializable{
 
@@ -17,9 +21,19 @@ public class KeyValuePair implements Serializable{
     private String value;//	String	否	值
     private String description;//	String	否	描述
 
+    /**
+     * Instantiates a new Key value pair.
+     */
     public KeyValuePair() {
     }
 
+    /**
+     * Instantiates a new Key value pair.
+     *
+     * @param key         the key
+     * @param value       the value
+     * @param description the description
+     */
     public KeyValuePair(String key, String value, String description) {
         this.key = key;
         this.value = value;
@@ -35,26 +49,56 @@ public class KeyValuePair implements Serializable{
                 '}';
     }
 
+    /**
+     * Gets key.
+     *
+     * @return the key
+     */
     public String getKey() {
         return key;
     }
 
+    /**
+     * Sets key.
+     *
+     * @param key the key
+     */
     public void setKey(String key) {
         this.key = key;
     }
 
+    /**
+     * Gets value.
+     *
+     * @return the value
+     */
     public String getValue() {
         return value;
     }
 
+    /**
+     * Sets value.
+     *
+     * @param value the value
+     */
     public void setValue(String value) {
         this.value = value;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return the description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets description.
+     *
+     * @param description the description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
