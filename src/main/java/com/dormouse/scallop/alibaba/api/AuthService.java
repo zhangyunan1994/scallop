@@ -1,33 +1,32 @@
 /*
- * Copyright (c) 2018. author and authors
+ * Copyright (c) 2018. author and authors.
  */
 
 package com.dormouse.scallop.alibaba.api;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sparrow.component.util.CommonUtil;
-import com.sparrow.sdk.ApiCallService;
+import com.dormouse.scallop.alibaba.client.ApiCallService;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
 /**
- * 授权服务类，主要提供了所有授权服务都会用到的获取授权令牌的功能
- */
-
-/**
- * Created by zhang yufei on 2017/8/20.
+ * The type Auth service.
+ *
+ * @author yunan.zhang
+ * @version 0.0.1
  */
 public class AuthService {
 
     /**
      * 通过临时令牌换取授权令牌
-     * @param host 请求的主机名，包括域名和端口
-     * @param params 请求参数，必填client_id、client_secret、redirect_uri和code，scope和view可选
+     *
+     * @param host             请求的主机名，包括域名和端口
+     * @param params           请求参数，必填client_id、client_secret、redirect_uri和code，scope和view可选
      * @param needRefreshToken 是否需要返回refreshToken
-     * @return getToken请求的json串
+     * @return getToken请求的json串 string
      */
     public static String getToken(String host, Map<String, String> params, boolean needRefreshToken){
         String urlHead = "https://" + host + "/openapi/";
@@ -45,7 +44,7 @@ public class AuthService {
             params.put("need_refresh_token", Boolean.toString(needRefreshToken));
             String appKey = params.get("client_id");
             String urlPath = CommonUtil.buildInvokeUrlPath(namespace, name, version, protocol, appKey);
-            String result = ApiCallService.callApiTest(urlHead, urlPath, null, params);
+            String result = ApiCallService.callApi(urlHead, urlPath, null, params);
             return result;
         }
         return null;
@@ -53,9 +52,10 @@ public class AuthService {
 
     /**
      * 通过长时令牌换取授权令牌
-     * @param host 请求的主机名，包括域名和端口
+     *
+     * @param host   请求的主机名，包括域名和端口
      * @param params 请求参数，必填client_id、client_secret、redirect_uri和refresh_token，scope和view可选
-     * @return
+     * @return string
      */
     public static String refreshToken(String host, Map<String, String> params){
         String urlHead = "https://" + host + "/openapi/";
@@ -72,12 +72,17 @@ public class AuthService {
             params.put("grant_type", "refresh_token");
             String appKey = params.get("client_id");
             String urlPath = CommonUtil.buildInvokeUrlPath(namespace, name, version, protocol, appKey);
-            String result = ApiCallService.callApiTest(urlHead, urlPath, null, params);
+            String result = ApiCallService.callApi(urlHead, urlPath, null, params);
             return result;
         }
         return null;
     }
 
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
     public static void main(String[] args){
         String host = "gw.open.1688.com";//国际交易请用"gw.api.alibaba.com"
         String client_id = "3036311";
@@ -115,7 +120,7 @@ public class AuthService {
         String urlHead = "http://" + host + "/openapi/";
         Map<String, String> param = new HashMap<String, String>();
         param.put("access_token", (String)jsonObject1.get("access_token"));
-        String result = ApiCallService.callApiTest(urlHead, urlPath, appSecret, param);
+        String result = ApiCallService.callApi(urlHead, urlPath, appSecret, param);
         System.out.println(result);
     }
 }

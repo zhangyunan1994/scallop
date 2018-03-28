@@ -1,25 +1,37 @@
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
 package com.dormouse.scallop.alibaba.api.product;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sparrow.sdk.ApiCallService;
-import com.sparrow.sdk.alibaba.client.entity.ApplicationParam;
-import com.sparrow.sdk.alibaba.client.entity.AuthorizationToken;
-import com.sparrow.sdk.alibaba.constant.AliConstant;
-import com.sparrow.sdk.alibaba.util.MapUtil;
+import com.dormouse.scallop.alibaba.client.entity.ApplicationParam;
+import com.dormouse.scallop.alibaba.client.entity.AuthorizationToken;
+import com.dormouse.scallop.alibaba.constant.AliConstant;
+import com.dormouse.scallop.tool.MapUtil;
+import com.dormouse.scallop.alibaba.client.ApiCallService;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
- * desc :
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * date  : 2017/11/26 下午4:49
- * todo  :
+ * The type Product facade.
+ * @author yunan.zhang
+ * @version 0.0.1
  */
 public class ProductFacade {
 
+    /**
+     * Get list json object.
+     *
+     * @param applicationParam   the application param
+     * @param authorizationToken the authorization token
+     * @param productParam       the product param
+     * @return the json object
+     */
     public static JSONObject getList(ApplicationParam applicationParam, AuthorizationToken authorizationToken, ProductParam productParam){
         Map<String, String> params = new HashMap<>();
         params.put("access_token",authorizationToken.getAccessToken());

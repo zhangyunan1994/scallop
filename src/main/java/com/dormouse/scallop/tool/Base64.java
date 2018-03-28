@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
 package com.dormouse.scallop.tool;
 
 
@@ -179,12 +183,10 @@ public class Base64 {
      * @param pObject Object to decode
      * @return An object (of type byte[]) containing the
      * binary data which corresponds to the byte[] supplied.
-     * @throws CoderException if the parameter supplied is not
-     *                        of type byte[]
      */
-    public Object decode(Object pObject) throws CoderException {
+    public Object decode(Object pObject) {
         if (!(pObject instanceof byte[])) {
-            throw new CoderException("Parameter supplied to Base64 decode is not a byte[]");
+            throw new RuntimeException("Parameter supplied to Base64 decode is not a byte[]");
         }
         return decode((byte[]) pObject);
     }
@@ -480,12 +482,10 @@ public class Base64 {
      * @param pObject Object to encode
      * @return An object (of type byte[]) containing the
      * base64 encoded data which corresponds to the byte[] supplied.
-     * @throws CoderException if the parameter supplied is not
-     *                        of type byte[]
      */
-    public Object encode(Object pObject) throws CoderException {
+    public Object encode(Object pObject) {
         if (!(pObject instanceof byte[])) {
-            throw new CoderException(
+            throw new RuntimeException(
                     "Parameter supplied to Base64 encode is not a byte[]");
         }
         return encode((byte[]) pObject);

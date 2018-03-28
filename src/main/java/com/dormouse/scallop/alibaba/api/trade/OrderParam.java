@@ -1,14 +1,19 @@
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
 package com.dormouse.scallop.alibaba.api.trade;
 
-import java.util.Date;
+
+import lombok.Data;
 
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/9/17 下午4:14
- * todo  :
+ * The type Order param.
+ *
+ * @author yunan.zhang
+ * @version 0.0.1
  */
+@Data
 public class OrderParam {
     private String createEndTime;   // 否 下单结束时间
     private String createStartTime;	// 否 下单开始时间
@@ -39,9 +44,25 @@ public class OrderParam {
     private Boolean needMemoInfo;   // 否 是否需要查询备注信息
     private Integer sellerRateStatus;//	否
 
+    /**
+     * Instantiates a new Order param.
+     */
     public OrderParam() {
     }
 
+    /**
+     * Instantiates a new Order param.
+     *
+     * @param createEndTime   the create end time
+     * @param createStartTime the create start time
+     * @param orderStatus     the order status
+     * @param page            the page
+     * @param pageSize        the page size
+     * @param refundStatus    the refund status
+     * @param buyerMemberId   the buyer member id
+     * @param tradeType       the trade type
+     * @param needMemoInfo    the need memo info
+     */
     public OrderParam(String createEndTime, String createStartTime, String orderStatus, Integer page, Integer pageSize,
                       String refundStatus, String buyerMemberId, String tradeType, Boolean needMemoInfo) {
         this.createEndTime = createEndTime;
@@ -55,138 +76,308 @@ public class OrderParam {
         this.needMemoInfo = needMemoInfo;
     }
 
+    /**
+     * Gets create end time.
+     *
+     * @return the create end time
+     */
     public String getCreateEndTime() {
         return createEndTime;
     }
 
+    /**
+     * Sets create end time.
+     *
+     * @param createEndTime the create end time
+     */
     public void setCreateEndTime(String createEndTime) {
         this.createEndTime = createEndTime;
     }
 
+    /**
+     * Gets create start time.
+     *
+     * @return the create start time
+     */
     public String getCreateStartTime() {
         return createStartTime;
     }
 
+    /**
+     * Sets create start time.
+     *
+     * @param createStartTime the create start time
+     */
     public void setCreateStartTime(String createStartTime) {
         this.createStartTime = createStartTime;
     }
 
+    /**
+     * Gets his.
+     *
+     * @return the his
+     */
     public Boolean getHis() {
         return isHis;
     }
 
+    /**
+     * Sets his.
+     *
+     * @param his the his
+     */
     public void setHis(Boolean his) {
         isHis = his;
     }
 
+    /**
+     * Gets modify end time.
+     *
+     * @return the modify end time
+     */
     public String getModifyEndTime() {
         return modifyEndTime;
     }
 
+    /**
+     * Sets modify end time.
+     *
+     * @param modifyEndTime the modify end time
+     */
     public void setModifyEndTime(String modifyEndTime) {
         this.modifyEndTime = modifyEndTime;
     }
 
+    /**
+     * Gets modify start time.
+     *
+     * @return the modify start time
+     */
     public String getModifyStartTime() {
         return modifyStartTime;
     }
 
+    /**
+     * Sets modify start time.
+     *
+     * @param modifyStartTime the modify start time
+     */
     public void setModifyStartTime(String modifyStartTime) {
         this.modifyStartTime = modifyStartTime;
     }
 
+    /**
+     * Gets order status.
+     *
+     * @return the order status
+     */
     public String getOrderStatus() {
         return orderStatus;
     }
 
+    /**
+     * Sets order status.
+     *
+     * @param orderStatus the order status
+     */
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
 
+    /**
+     * Gets page.
+     *
+     * @return the page
+     */
     public Integer getPage() {
         return page;
     }
 
+    /**
+     * Sets page.
+     *
+     * @param page the page
+     */
     public void setPage(Integer page) {
         this.page = page;
     }
 
+    /**
+     * Gets page size.
+     *
+     * @return the page size
+     */
     public Integer getPageSize() {
         return pageSize;
     }
 
+    /**
+     * Sets page size.
+     *
+     * @param pageSize the page size
+     */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
+    /**
+     * Gets refund status.
+     *
+     * @return the refund status
+     */
     public String getRefundStatus() {
         return refundStatus;
     }
 
+    /**
+     * Sets refund status.
+     *
+     * @param refundStatus the refund status
+     */
     public void setRefundStatus(String refundStatus) {
         this.refundStatus = refundStatus;
     }
 
+    /**
+     * Gets buyer member id.
+     *
+     * @return the buyer member id
+     */
     public String getBuyerMemberId() {
         return buyerMemberId;
     }
 
+    /**
+     * Sets buyer member id.
+     *
+     * @param buyerMemberId the buyer member id
+     */
     public void setBuyerMemberId(String buyerMemberId) {
         this.buyerMemberId = buyerMemberId;
     }
 
+    /**
+     * Gets buyer rate status.
+     *
+     * @return the buyer rate status
+     */
     public Integer getBuyerRateStatus() {
         return buyerRateStatus;
     }
 
+    /**
+     * Sets buyer rate status.
+     *
+     * @param buyerRateStatus the buyer rate status
+     */
     public void setBuyerRateStatus(Integer buyerRateStatus) {
         this.buyerRateStatus = buyerRateStatus;
     }
 
+    /**
+     * Gets trade type.
+     *
+     * @return the trade type
+     */
     public String getTradeType() {
         return tradeType;
     }
 
+    /**
+     * Sets trade type.
+     *
+     * @param tradeType the trade type
+     */
     public void setTradeType(String tradeType) {
         this.tradeType = tradeType;
     }
 
+    /**
+     * Get biz types string [ ].
+     *
+     * @return the string [ ]
+     */
     public String[] getBizTypes() {
         return bizTypes;
     }
 
+    /**
+     * Sets biz types.
+     *
+     * @param bizTypes the biz types
+     */
     public void setBizTypes(String[] bizTypes) {
         this.bizTypes = bizTypes;
     }
 
+    /**
+     * Gets product name.
+     *
+     * @return the product name
+     */
     public String getProductName() {
         return productName;
     }
 
+    /**
+     * Sets product name.
+     *
+     * @param productName the product name
+     */
     public void setProductName(String productName) {
         this.productName = productName;
     }
 
+    /**
+     * Gets need buyer address and phone.
+     *
+     * @return the need buyer address and phone
+     */
     public Boolean getNeedBuyerAddressAndPhone() {
         return needBuyerAddressAndPhone;
     }
 
+    /**
+     * Sets need buyer address and phone.
+     *
+     * @param needBuyerAddressAndPhone the need buyer address and phone
+     */
     public void setNeedBuyerAddressAndPhone(Boolean needBuyerAddressAndPhone) {
         this.needBuyerAddressAndPhone = needBuyerAddressAndPhone;
     }
 
+    /**
+     * Gets need memo info.
+     *
+     * @return the need memo info
+     */
     public Boolean getNeedMemoInfo() {
         return needMemoInfo;
     }
 
+    /**
+     * Sets need memo info.
+     *
+     * @param needMemoInfo the need memo info
+     */
     public void setNeedMemoInfo(Boolean needMemoInfo) {
         this.needMemoInfo = needMemoInfo;
     }
 
+    /**
+     * Gets seller rate status.
+     *
+     * @return the seller rate status
+     */
     public Integer getSellerRateStatus() {
         return sellerRateStatus;
     }
 
+    /**
+     * Sets seller rate status.
+     *
+     * @param sellerRateStatus the seller rate status
+     */
     public void setSellerRateStatus(Integer sellerRateStatus) {
         this.sellerRateStatus = sellerRateStatus;
     }

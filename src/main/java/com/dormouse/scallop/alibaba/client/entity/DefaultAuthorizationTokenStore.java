@@ -1,10 +1,7 @@
 /*
- * Copyright 2012 Alibaba.com All right reserved. This software is the
- * confidential and proprietary information of Alibaba.com ("Confidential
- * Information"). You shall not disclose such Confidential Information and shall
- * use it only in accordance with the terms of the license agreement you entered
- * into with Alibaba.com.
+ * Copyright (c) 2018. author and authors.
  */
+
 package com.dormouse.scallop.alibaba.client.entity;
 
 import java.util.HashMap;
@@ -16,7 +13,7 @@ import java.util.Map;
  * @author fray.yangb Aug 21, 2012 3:25:30 PM
  */
 public class DefaultAuthorizationTokenStore implements AuthorizationTokenStore {
-    private Map<Object, Object> cache = new HashMap<Object, Object>();
+    private Map<Object, Object> cache = new HashMap<>();
 
     public AuthorizationToken getToken(String authorizationCode) {
         return (AuthorizationToken) cache.get(authorizationCode);

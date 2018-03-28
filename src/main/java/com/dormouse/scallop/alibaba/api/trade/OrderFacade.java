@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
 package com.dormouse.scallop.alibaba.api.trade;
 
 import com.alibaba.fastjson.JSON;
@@ -7,8 +11,9 @@ import com.dormouse.scallop.alibaba.client.entity.AuthorizationToken;
 import com.dormouse.scallop.alibaba.client.entity.trade.TradeInfo;
 import com.dormouse.scallop.alibaba.constant.AliConstant;
 import com.dormouse.scallop.tool.MapUtil;
-import com.dormouse.sdk.ApiCallService;
+import com.dormouse.scallop.alibaba.client.ApiCallService;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

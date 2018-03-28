@@ -1,10 +1,9 @@
 /*
- * Copyright (c) 2018. author and authors
+ * Copyright (c) 2018. author and authors.
  */
 
 package com.dormouse.scallop.alibaba.api;
 
-import com.sparrow.component.util.CommonUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,9 +12,9 @@ import java.util.Map;
 /**
  * 客户端/WEB端授权服务类，主要用于用户在使用客户端或者Web端类型的app时进行授权
  * 注意：在应用市场售卖的app请勿使用这种方式，请使用托管式授权
- */
-/**
- * Created by zhang yufei on 2017/8/20.
+ *
+ * @author yunan.zhang
+ * @version 0.0.1
  */
 public class ClientAuthService {
 
