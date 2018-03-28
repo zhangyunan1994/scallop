@@ -11,9 +11,9 @@ import java.text.ParseException;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sparrow.sdk.alibaba.client.entity.ResponseWrapper;
-import com.sparrow.sdk.alibaba.client.util.LoggerHelper;
-import com.sparrow.sdk.alibaba.client.serialize.DeSerializer;
+import com.dormouse.scallop.alibaba.client.entity.ResponseWrapper;
+import com.dormouse.scallop.alibaba.client.serialize.DeSerializer;
+import com.dormouse.scallop.alibaba.client.util.LoggerHelper;
 
 /**
  * @author hongbang.hb

@@ -9,7 +9,6 @@ package com.dormouse.scallop.alibaba.api;
  * 注意：在应用市场售卖的app请使用托管式授权
  */
 
-import com.sparrow.component.util.CommonUtil;
 
 import java.util.HashMap;
 import java.util.Map;

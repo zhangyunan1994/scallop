@@ -3,12 +3,12 @@
  */
 package com.dormouse.scallop.alibaba.client.serialize;
 
+import com.dormouse.scallop.alibaba.client.entity.ResponseWrapper;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;
 
-import com.sparrow.sdk.alibaba.client.entity.ResponseWrapper;
-import com.sparrow.sdk.alibaba.client.policy.Protocol;
 
 /**
  * @author hongbang.hb
@@ -19,7 +19,6 @@ public interface DeSerializer {
 	/**
 	 * 返回该反序列化接口支持的数据协议.
 	 * 
-	 * @see Protocol
 	 * @return
 	 */
 	public String supportedContentType();

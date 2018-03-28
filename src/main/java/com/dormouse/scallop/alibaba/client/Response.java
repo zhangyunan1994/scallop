@@ -15,7 +15,8 @@
  */
 package com.dormouse.scallop.alibaba.client;
 
-import com.sparrow.sdk.alibaba.client.entity.ResponseWrapper;
+
+import com.dormouse.scallop.alibaba.client.entity.ResponseWrapper;
 
 /**
  * http调用返回的结果对象

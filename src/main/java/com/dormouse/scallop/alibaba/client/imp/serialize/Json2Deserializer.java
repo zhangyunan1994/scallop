@@ -20,10 +20,10 @@ import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sparrow.sdk.alibaba.client.util.ExceptionParser;
-import com.sparrow.sdk.alibaba.client.entity.ResponseWrapper;
-import com.sparrow.sdk.alibaba.client.policy.Protocol;
-import com.sparrow.sdk.alibaba.client.serialize.DeSerializerListener;
+import com.dormouse.scallop.alibaba.client.entity.ResponseWrapper;
+import com.dormouse.scallop.alibaba.client.policy.Protocol;
+import com.dormouse.scallop.alibaba.client.serialize.DeSerializerListener;
+import com.dormouse.scallop.alibaba.client.util.ExceptionParser;
 
 /**
  * 

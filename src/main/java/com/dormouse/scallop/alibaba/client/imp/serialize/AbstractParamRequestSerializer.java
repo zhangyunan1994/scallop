@@ -3,18 +3,19 @@
  */
 package com.dormouse.scallop.alibaba.client.imp.serialize;
 
+import com.dormouse.scallop.alibaba.client.serialize.Serializer;
+import com.dormouse.scallop.alibaba.client.serialize.SerializerListener;
+import com.dormouse.scallop.tool.DateUtil;
+import com.dormouse.scallop.tool.DefaultPropertyUtils;
+import com.dormouse.scallop.tool.GenericsUtil;
+import com.dormouse.scallop.tool.SimplePropertyDescriptor;
+
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.sparrow.sdk.alibaba.client.serialize.Serializer;
-import com.sparrow.sdk.alibaba.client.serialize.SerializerListener;
-import com.sparrow.sdk.alibaba.util.DateUtil;
-import com.sparrow.sdk.alibaba.util.DefaultPropertyUtils;
-import com.sparrow.sdk.alibaba.util.GenericsUtil;
-import com.sparrow.sdk.alibaba.util.SimplePropertyDescriptor;
 
 /**
  * @author hongbang.hb

@@ -1,20 +1,16 @@
 package com.dormouse.scallop.alibaba.client.util;
 
+import com.dormouse.scallop.alibaba.client.exception.*;
+import com.dormouse.scallop.alibaba.client.exception.SecurityException;
+import com.dormouse.scallop.tool.GenericsUtil;
+
 import java.io.IOException;
 import java.util.Map;
 
-import com.sparrow.sdk.alibaba.client.exception.AuthServiceException;
-import com.sparrow.sdk.alibaba.client.exception.InvokeConnectException;
-import com.sparrow.sdk.alibaba.client.exception.InvokeTimeoutException;
-import com.sparrow.sdk.alibaba.client.exception.OceanException;
-import com.sparrow.sdk.alibaba.client.exception.SecurityException;
-import com.sparrow.sdk.alibaba.client.exception.UnsupportAPIException;
-import com.sparrow.sdk.alibaba.client.policy.Protocol;
-import com.sparrow.sdk.alibaba.util.GenericsUtil;
+
 
 /**
  * Build <code>Exception</code> for all kinds of
- * {@link Protocol}, base on the exption
  * string which got from <code>Reader</code>
  * 
  * @author xiaoning.qxn
@@ -26,8 +22,6 @@ public class ExceptionParser {
 	 * 
 	 * @param exption
 	 * @return the new exception
-	 * @throws JsonMappingException
-	 * @throws JsonParseException
 	 * @throws IOException
 	 */
 	@SuppressWarnings("unchecked")

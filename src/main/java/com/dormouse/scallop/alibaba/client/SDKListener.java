@@ -3,8 +3,9 @@
  */
 package com.dormouse.scallop.alibaba.client;
 
-import com.sparrow.sdk.alibaba.client.serialize.DeSerializerListener;
-import com.sparrow.sdk.alibaba.client.serialize.SerializerListener;
+
+import com.dormouse.scallop.alibaba.client.serialize.DeSerializerListener;
+import com.dormouse.scallop.alibaba.client.serialize.SerializerListener;
 
 /**
  * @author hongbang.hb

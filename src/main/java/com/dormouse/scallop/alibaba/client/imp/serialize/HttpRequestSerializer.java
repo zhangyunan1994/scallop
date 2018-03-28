@@ -3,7 +3,8 @@
  */
 package com.dormouse.scallop.alibaba.client.imp.serialize;
 
-import com.sparrow.sdk.alibaba.client.policy.Protocol;
+
+import com.dormouse.scallop.alibaba.client.policy.Protocol;
 
 /**
  * @author hongbang.hb

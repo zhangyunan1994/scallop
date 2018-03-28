@@ -7,7 +7,8 @@
  */
 package com.dormouse.scallop.alibaba.client;
 
-import com.sparrow.sdk.alibaba.client.exception.OceanException;
+
+import com.dormouse.scallop.alibaba.client.exception.OceanException;
 
 /**
  * 类ErrorHandler.java的实现描述：业务异常处理

@@ -3,7 +3,6 @@
  */
 package com.dormouse.scallop.alibaba.client.serialize;
 
-import com.sparrow.sdk.alibaba.client.policy.Protocol;
 
 import java.util.Map;
 
@@ -16,7 +15,6 @@ public interface Serializer {
 	/**
 	 * 返回该反序列化接口支持的数据协议.
 	 * 
-	 * @see Protocol
 	 * @return
 	 */
 	public String supportedContentType();

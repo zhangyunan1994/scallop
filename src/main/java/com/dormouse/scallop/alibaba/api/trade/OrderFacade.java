@@ -2,31 +2,32 @@ package com.dormouse.scallop.alibaba.api.trade;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sparrow.sdk.ApiCallService;
-import com.sparrow.sdk.alibaba.api.product.ProductParam;
-import com.sparrow.sdk.alibaba.client.entity.ApplicationParam;
-import com.sparrow.sdk.alibaba.client.entity.AuthorizationToken;
-import com.sparrow.sdk.alibaba.client.entity.product.ProductInfo;
-import com.sparrow.sdk.alibaba.client.entity.trade.OrderBaseInfo;
-import com.sparrow.sdk.alibaba.client.entity.trade.TradeInfo;
-import com.sparrow.sdk.alibaba.constant.AliConstant;
-import com.sparrow.sdk.alibaba.util.MapUtil;
-import com.sparrow.sdk.alibaba.util.StringUtil;
+import com.dormouse.scallop.alibaba.client.entity.ApplicationParam;
+import com.dormouse.scallop.alibaba.client.entity.AuthorizationToken;
+import com.dormouse.scallop.alibaba.client.entity.trade.TradeInfo;
+import com.dormouse.scallop.alibaba.constant.AliConstant;
+import com.dormouse.scallop.tool.MapUtil;
+import com.dormouse.sdk.ApiCallService;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/9/17 下午4:04
- * todo  :
+ * The type Order facade.
+ *
+ * @author yunan.zhang
+ * @version 0.0.1
  */
 public class OrderFacade {
 
+    /**
+     * Gets seller order list.
+     *
+     * @param applicationParam   the application param
+     * @param authorizationToken the authorization token
+     * @param orderParam         the order param
+     * @return the seller order list
+     */
     public static List<TradeInfo> getSellerOrderList(ApplicationParam applicationParam, AuthorizationToken
             authorizationToken, OrderParam orderParam) {
         JSONObject result = getSellerOrderListJson(applicationParam, authorizationToken, orderParam);
@@ -34,6 +35,14 @@ public class OrderFacade {
         return tradeInfoList;
     }
 
+    /**
+     * Gets seller order list json.
+     *
+     * @param applicationParam   the application param
+     * @param authorizationToken the authorization token
+     * @param orderParam         the order param
+     * @return the seller order list json
+     */
     public static JSONObject getSellerOrderListJson(ApplicationParam applicationParam, AuthorizationToken
             authorizationToken, OrderParam orderParam) {
         Map<String, String> params = new HashMap<>();

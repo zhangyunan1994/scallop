@@ -15,7 +15,8 @@
  */
 package com.dormouse.scallop.alibaba.client.policy;
 
-import com.sparrow.sdk.alibaba.client.ErrorHandler;
+
+import com.dormouse.scallop.alibaba.client.ErrorHandler;
 
 /**
  * 请求级访问策略
