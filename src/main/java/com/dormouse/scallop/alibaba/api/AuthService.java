@@ -6,7 +6,7 @@ package com.dormouse.scallop.alibaba.api;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.dormouse.scallop.alibaba.client.ApiCallService;
+import com.dormouse.scallop.alibaba.domain.ApiCallService;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -2,7 +2,7 @@
  * Copyright (c) 2018. author and authors.
  */
 
-package com.dormouse.scallop.alibaba.client.entity;
+package com.dormouse.scallop.alibaba.domain;
 
 
 /**

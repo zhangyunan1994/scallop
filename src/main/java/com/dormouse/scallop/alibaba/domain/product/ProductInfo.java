@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
@@ -16,24 +20,24 @@ import java.util.List;
  * date  : 2017/8/29 下午10:06
  * todo  :
  */
-public class ProductInfo implements Serializable{
+public class ProductInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private Long productID;     //商品ID
-    private String productType;	// 商品类型，在线批发商品(wholesale)或者询盘商品(sourcing)，1688网站缺省为wholesale
+    private String productType;    // 商品类型，在线批发商品(wholesale)或者询盘商品(sourcing)，1688网站缺省为wholesale
     private Long categoryID;    //	类目ID，标识商品所属类目
-    private List<ProductAttribute> attributes;	// alibaba.product.ProductAttribute[]	否	商品属性和属性值
+    private List<ProductAttribute> attributes;    // alibaba.product.ProductAttribute[]	否	商品属性和属性值
     private Long[] groupID;     //	Long[]	否	分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个
     private String status;      //	否 商品状态。auditing：审核中；online：已上网；FailAudited：审核未通过；outdated：已过期；member delete(d)：用户删除；delete：审核删除；published 已发布。此状态为系统内部控制，外部无法修改。
-    private String subject;	    // 商品标题，最多128个字符
-    private String description;	//商品详情描述，可包含图片中心的图片URL
-    private String language;	// 语种，参见FAQ 语种枚举值，1688网站默认传入CHINESE	ENGLISH
+    private String subject;        // 商品标题，最多128个字符
+    private String description;    //商品详情描述，可包含图片中心的图片URL
+    private String language;    // 语种，参见FAQ 语种枚举值，1688网站默认传入CHINESE	ENGLISH
     private Integer periodOfValidity;   // 信息有效期，按天计算，国际站无此信息
-    private Integer bizType;	        // 业务类型。1：商品，2：加工，3：代理，4：合作，5：商务服务。国际站按默认商品。
-    private Boolean pictureAuth;	    // 是否图片私密信息，国际站此字段无效
-    private ProductImageInfo image;	    // 商品主图
-    private List<ProductSKUInfo> skuInfos;	// sku信息
+    private Integer bizType;            // 业务类型。1：商品，2：加工，3：代理，4：合作，5：商务服务。国际站按默认商品。
+    private Boolean pictureAuth;        // 是否图片私密信息，国际站此字段无效
+    private ProductImageInfo image;        // 商品主图
+    private List<ProductSKUInfo> skuInfos;    // sku信息
     private ProductSaleInfo saleInfo;       // 商品销售信息
     private ProductShippingInfo shippingInfo;   // 商品物流信息
     private ProductInternationalTradeInfo internationalTradeInfo;   // 商品国际贸易信息，1688无需处理此字段
@@ -41,13 +45,13 @@ public class ProductInfo implements Serializable{
     @JSONField(format = "yyyyMMddHHmmssSSSZ")
     private Date createTime;        // 创建时间
     @JSONField(format = "yyyyMMddHHmmssSSSZ")
-    private Date lastUpdateTime;	// 最后修改时间
+    private Date lastUpdateTime;    // 最后修改时间
     @JSONField(format = "yyyyMMddHHmmssSSSZ")
-    private Date lastRepostTime;	// 最近重发时间，国际站无此信息
+    private Date lastRepostTime;    // 最近重发时间，国际站无此信息
     @JSONField(format = "yyyyMMddHHmmssSSSZ")
-    private Date approvedTime;	    // 审核通过时间，国际站无此信息
+    private Date approvedTime;        // 审核通过时间，国际站无此信息
     @JSONField(format = "yyyyMMddHHmmssSSSZ")
-    private Date expireTime;	    // 过期时间，国际站无此信息
+    private Date expireTime;        // 过期时间，国际站无此信息
 
     public ProductInfo() {
     }

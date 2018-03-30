@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -10,7 +14,7 @@ import java.util.Arrays;
  * date  : 2017/8/29 下午10:11
  * todo  :
  */
-public class ProductImageInfo implements Serializable{
+public class ProductImageInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

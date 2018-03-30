@@ -6,12 +6,12 @@ package com.dormouse.scallop.alibaba.api.trade;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.dormouse.scallop.alibaba.client.entity.ApplicationParam;
-import com.dormouse.scallop.alibaba.client.entity.AuthorizationToken;
-import com.dormouse.scallop.alibaba.client.entity.trade.TradeInfo;
+import com.dormouse.scallop.alibaba.domain.ApplicationParam;
+import com.dormouse.scallop.alibaba.domain.AuthorizationToken;
+import com.dormouse.scallop.alibaba.domain.trade.TradeInfo;
 import com.dormouse.scallop.alibaba.constant.AliConstant;
 import com.dormouse.scallop.tool.MapUtil;
-import com.dormouse.scallop.alibaba.client.ApiCallService;
+import com.dormouse.scallop.alibaba.domain.ApiCallService;
 
 import java.util.HashMap;
 import java.util.List;

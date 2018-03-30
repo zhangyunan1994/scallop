@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 
@@ -9,12 +13,12 @@ import java.io.Serializable;
  * date  : 2017/8/29 下午10:23
  * todo  :
  */
-public class SKUAttrInfo implements Serializable{
+public class SKUAttrInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private Long attributeID;   //	Long	否	sku属性ID
-    private Long attValueID;	//  Long	否	sku值ID，1688不用关注
+    private Long attValueID;    //  Long	否	sku值ID，1688不用关注
     private String attributeValue;  //  String	否	sku值内容，国际站不用关注
     private String customValueName; //	String	否	自定义属性值名称，1688无需关注
     private String skuImageUrl;     //	String	否	sku图片

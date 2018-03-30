@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.trade;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.trade;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,7 +16,7 @@ import java.util.List;
  * date  : 2017/8/30 下午9:30
  * todo  :
  */
-public class ProductItemInfo implements Serializable{
+public class ProductItemInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

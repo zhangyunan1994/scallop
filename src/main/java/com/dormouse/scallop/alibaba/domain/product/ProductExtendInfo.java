@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 

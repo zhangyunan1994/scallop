@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 
@@ -15,8 +19,8 @@ public class ProductAttribute implements Serializable {
 
     private Long attributeID;       // 属性ID	123456
     private String attributeName;   // 属性名称	color
-    private Long valueID;	        // 属性值ID	123456
-    private String value;	        // 属性值	grey
+    private Long valueID;            // 属性值ID	123456
+    private String value;            // 属性值	grey
     private Boolean isCustom;       // 是否为自定义属性，国际站无需关注	true
 
     public ProductAttribute() {

@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 import java.util.List;
@@ -10,19 +14,19 @@ import java.util.List;
  * date  : 2017/8/29 下午10:12
  * todo  :
  */
-public class ProductSKUInfo implements Serializable{
+public class ProductSKUInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private List<SKUAttrInfo> attributes;	// SKU属性值，可填多组信息
+    private List<SKUAttrInfo> attributes;    // SKU属性值，可填多组信息
     private String cargoNumber;     //	String	否	指定规格的货号，国际站无需关注
-    private Integer amountOnSale;	// Integer	否	可销售数量，国际站无需关注
-    private Double retailPrice;	    // double	否	建议零售价，国际站无需关注
-    private Double price;	        // Double	否	报价时该规格的单价，国际站注意要点：含有SKU属性的在线批发产品设定具体价格时使用此值，若设置阶梯价格则使用priceRange
-    private List<ProductPriceRange>  priceRange; //	alibaba.product.ProductPriceRange[]	否	阶梯报价，1688无需关注
-    private String skuCode;	    // String	否	商品编码，1688无需关注
+    private Integer amountOnSale;    // Integer	否	可销售数量，国际站无需关注
+    private Double retailPrice;        // double	否	建议零售价，国际站无需关注
+    private Double price;            // Double	否	报价时该规格的单价，国际站注意要点：含有SKU属性的在线批发产品设定具体价格时使用此值，若设置阶梯价格则使用priceRange
+    private List<ProductPriceRange> priceRange; //	alibaba.product.ProductPriceRange[]	否	阶梯报价，1688无需关注
+    private String skuCode;        // String	否	商品编码，1688无需关注
     private Long skuId;     // 否	skuId, 国际站无需关注
-    private String specId;	// String	否	specId, 国际站无需关注
+    private String specId;    // String	否	specId, 国际站无需关注
 
     public ProductSKUInfo() {
     }

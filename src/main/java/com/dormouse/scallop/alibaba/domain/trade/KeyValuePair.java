@@ -2,7 +2,7 @@
  * Copyright (c) 2018. author and authors.
  */
 
-package com.dormouse.scallop.alibaba.client.entity.trade;
+package com.dormouse.scallop.alibaba.domain.trade;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author yunan.zhang
  * @version 0.0.1
  */
-public class KeyValuePair implements Serializable{
+public class KeyValuePair implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

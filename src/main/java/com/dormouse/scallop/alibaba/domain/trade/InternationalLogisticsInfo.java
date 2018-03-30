@@ -2,7 +2,7 @@
  * Copyright (c) 2018. author and authors.
  */
 
-package com.dormouse.scallop.alibaba.client.entity.trade;
+package com.dormouse.scallop.alibaba.domain.trade;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -17,7 +17,7 @@ import java.util.Date;
  * @author yunan.zhang
  * @version 0.0.1
  */
-public class InternationalLogisticsInfo implements Serializable{
+public class InternationalLogisticsInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

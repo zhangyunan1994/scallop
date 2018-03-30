@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.trade;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.trade;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +14,7 @@ import java.util.Date;
  * date  : 2017/8/30 下午9:26
  * todo  :
  */
-public class NativeLogisticsItemsInfo implements Serializable{
+public class NativeLogisticsItemsInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

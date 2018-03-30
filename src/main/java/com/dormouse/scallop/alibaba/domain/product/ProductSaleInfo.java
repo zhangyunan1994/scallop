@@ -1,4 +1,8 @@
-package com.dormouse.scallop.alibaba.client.entity.product;
+/*
+ * Copyright (c) 2018. author and authors.
+ */
+
+package com.dormouse.scallop.alibaba.domain.product;
 
 import java.io.Serializable;
 import java.util.List;
@@ -26,7 +30,7 @@ public class ProductSaleInfo implements Serializable {
     private Double retailprice;//	Double	否	建议零售价，国际站无需关注
     private String tax;//	String	否	税率相关信息，内容由用户自定，国际站无需关注
     private String sellunit;//	String	否	售卖单位，如果为批量售卖，代表售卖的单位，例如1"手"=12“件"的"手"，国际站无需关注
-    private Integer quoteType;	//Integer	否	普通报价-FIXED_PRICE("0"),SKU规格报价-SKU_PRICE("1"),SKU区间报价（商品维度）-SKU_PRICE_RANGE_FOR_OFFER("2"),SKU区间报价（SKU维度）-SKU_PRICE_RANGE("3")，国际站无需关注
+    private Integer quoteType;    //Integer	否	普通报价-FIXED_PRICE("0"),SKU规格报价-SKU_PRICE("1"),SKU区间报价（商品维度）-SKU_PRICE_RANGE_FOR_OFFER("2"),SKU区间报价（SKU维度）-SKU_PRICE_RANGE("3")，国际站无需关注
 
     public ProductSaleInfo() {
     }

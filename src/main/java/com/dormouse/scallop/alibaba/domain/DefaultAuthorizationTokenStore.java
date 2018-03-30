@@ -2,14 +2,14 @@
  * Copyright (c) 2018. author and authors.
  */
 
-package com.dormouse.scallop.alibaba.client.entity;
+package com.dormouse.scallop.alibaba.domain;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * DefaultAuthorizationTokenStore
- * 
+ *
  * @author fray.yangb Aug 21, 2012 3:25:30 PM
  */
 public class DefaultAuthorizationTokenStore implements AuthorizationTokenStore {
