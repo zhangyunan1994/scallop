@@ -8,12 +8,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/30 下午9:31
- * todo  :
+ * The type Trade terms info.
  */
 public class TradeTermsInfo implements Serializable {
 
@@ -27,9 +24,23 @@ public class TradeTermsInfo implements Serializable {
     private String phaseCondition;//	java.lang.String	否	阶段条件，1688无此内容
     private String phaseDate;//	java.lang.String	否	阶段时间，1688无此内容
 
+    /**
+     * Instantiates a new Trade terms info.
+     */
     public TradeTermsInfo() {
     }
 
+    /**
+     * Instantiates a new Trade terms info.
+     *
+     * @param payStatus      the pay status
+     * @param payTime        the pay time
+     * @param payWay         the pay way
+     * @param phasAmount     the phas amount
+     * @param phase          the phase
+     * @param phaseCondition the phase condition
+     * @param phaseDate      the phase date
+     */
     public TradeTermsInfo(String payStatus, Date payTime, String payWay, BigDecimal phasAmount, Long phase, String phaseCondition, String phaseDate) {
         this.payStatus = payStatus;
         this.payTime = payTime;
@@ -53,58 +64,128 @@ public class TradeTermsInfo implements Serializable {
                 '}';
     }
 
+    /**
+     * Gets pay status.
+     *
+     * @return the pay status
+     */
     public String getPayStatus() {
         return payStatus;
     }
 
+    /**
+     * Sets pay status.
+     *
+     * @param payStatus the pay status
+     */
     public void setPayStatus(String payStatus) {
         this.payStatus = payStatus;
     }
 
+    /**
+     * Gets pay time.
+     *
+     * @return the pay time
+     */
     public Date getPayTime() {
         return payTime;
     }
 
+    /**
+     * Sets pay time.
+     *
+     * @param payTime the pay time
+     */
     public void setPayTime(Date payTime) {
         this.payTime = payTime;
     }
 
+    /**
+     * Gets pay way.
+     *
+     * @return the pay way
+     */
     public String getPayWay() {
         return payWay;
     }
 
+    /**
+     * Sets pay way.
+     *
+     * @param payWay the pay way
+     */
     public void setPayWay(String payWay) {
         this.payWay = payWay;
     }
 
+    /**
+     * Gets phas amount.
+     *
+     * @return the phas amount
+     */
     public BigDecimal getPhasAmount() {
         return phasAmount;
     }
 
+    /**
+     * Sets phas amount.
+     *
+     * @param phasAmount the phas amount
+     */
     public void setPhasAmount(BigDecimal phasAmount) {
         this.phasAmount = phasAmount;
     }
 
+    /**
+     * Gets phase.
+     *
+     * @return the phase
+     */
     public Long getPhase() {
         return phase;
     }
 
+    /**
+     * Sets phase.
+     *
+     * @param phase the phase
+     */
     public void setPhase(Long phase) {
         this.phase = phase;
     }
 
+    /**
+     * Gets phase condition.
+     *
+     * @return the phase condition
+     */
     public String getPhaseCondition() {
         return phaseCondition;
     }
 
+    /**
+     * Sets phase condition.
+     *
+     * @param phaseCondition the phase condition
+     */
     public void setPhaseCondition(String phaseCondition) {
         this.phaseCondition = phaseCondition;
     }
 
+    /**
+     * Gets phase date.
+     *
+     * @return the phase date
+     */
     public String getPhaseDate() {
         return phaseDate;
     }
 
+    /**
+     * Sets phase date.
+     *
+     * @param phaseDate the phase date
+     */
     public void setPhaseDate(String phaseDate) {
         this.phaseDate = phaseDate;
     }

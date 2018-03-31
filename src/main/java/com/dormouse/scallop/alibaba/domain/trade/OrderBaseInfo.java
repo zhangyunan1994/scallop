@@ -10,12 +10,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/30 下午9:03
- * todo  :
+ * The type Order base info.
  */
 public class OrderBaseInfo implements Serializable {
 
@@ -52,9 +49,46 @@ public class OrderBaseInfo implements Serializable {
     private Long refundPayment;//	Long	否	退款金额
     private String idOfStr;//	String	否	交易id(字符串格式)
 
+    /**
+     * Instantiates a new Order base info.
+     */
     public OrderBaseInfo() {
     }
 
+    /**
+     * Instantiates a new Order base info.
+     *
+     * @param allDeliveredTime  the all delivered time
+     * @param businessType      the business type
+     * @param buyerID           the buyer id
+     * @param buyerMemo         the buyer memo
+     * @param buyerSubID        the buyer sub id
+     * @param completeTime      the complete time
+     * @param createTime        the create time
+     * @param currency          the currency
+     * @param id                the id
+     * @param modifyTime        the modify time
+     * @param payTime           the pay time
+     * @param receivingTime     the receiving time
+     * @param refund            the refund
+     * @param remark            the remark
+     * @param sellerID          the seller id
+     * @param sellerMemo        the seller memo
+     * @param sellerSubID       the seller sub id
+     * @param shippingFee       the shipping fee
+     * @param status            the status
+     * @param totalAmount       the total amount
+     * @param buyerRemarkIcon   the buyer remark icon
+     * @param sellerRemarkIcon  the seller remark icon
+     * @param discount          the discount
+     * @param buyerContact      the buyer contact
+     * @param sellerContact     the seller contact
+     * @param tradeType         the trade type
+     * @param refundStatus      the refund status
+     * @param refundStatusForAs the refund status for as
+     * @param refundPayment     the refund payment
+     * @param idOfStr           the id of str
+     */
     public OrderBaseInfo(Date allDeliveredTime, String businessType, String buyerID, String buyerMemo, Long buyerSubID, Date completeTime, Date createTime, String currency, Long id, Date modifyTime, Date payTime, Date receivingTime, BigDecimal refund, String remark, String sellerID, String sellerMemo, Long sellerSubID, BigDecimal shippingFee, String status, BigDecimal totalAmount, String buyerRemarkIcon, String sellerRemarkIcon, Long discount, TradeContact buyerContact, TradeContact sellerContact, String tradeType, String refundStatus, String refundStatusForAs, Long refundPayment, String idOfStr) {
         this.allDeliveredTime = allDeliveredTime;
         this.businessType = businessType;
@@ -124,242 +158,548 @@ public class OrderBaseInfo implements Serializable {
                 '}';
     }
 
+    /**
+     * Gets all delivered time.
+     *
+     * @return the all delivered time
+     */
     public Date getAllDeliveredTime() {
         return allDeliveredTime;
     }
 
+    /**
+     * Sets all delivered time.
+     *
+     * @param allDeliveredTime the all delivered time
+     * @throws ParseException the parse exception
+     */
     public void setAllDeliveredTime(String allDeliveredTime) throws ParseException {
         this.allDeliveredTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(allDeliveredTime);
     }
 
+    /**
+     * Gets business type.
+     *
+     * @return the business type
+     */
     public String getBusinessType() {
         return businessType;
     }
 
+    /**
+     * Sets business type.
+     *
+     * @param businessType the business type
+     */
     public void setBusinessType(String businessType) {
         this.businessType = businessType;
     }
 
+    /**
+     * Gets buyer id.
+     *
+     * @return the buyer id
+     */
     public String getBuyerID() {
         return buyerID;
     }
 
+    /**
+     * Sets buyer id.
+     *
+     * @param buyerID the buyer id
+     */
     public void setBuyerID(String buyerID) {
         this.buyerID = buyerID;
     }
 
+    /**
+     * Gets buyer memo.
+     *
+     * @return the buyer memo
+     */
     public String getBuyerMemo() {
         return buyerMemo;
     }
 
+    /**
+     * Sets buyer memo.
+     *
+     * @param buyerMemo the buyer memo
+     */
     public void setBuyerMemo(String buyerMemo) {
         this.buyerMemo = buyerMemo;
     }
 
+    /**
+     * Gets buyer sub id.
+     *
+     * @return the buyer sub id
+     */
     public Long getBuyerSubID() {
         return buyerSubID;
     }
 
+    /**
+     * Sets buyer sub id.
+     *
+     * @param buyerSubID the buyer sub id
+     */
     public void setBuyerSubID(Long buyerSubID) {
         this.buyerSubID = buyerSubID;
     }
 
+    /**
+     * Gets complete time.
+     *
+     * @return the complete time
+     */
     public Date getCompleteTime() {
         return completeTime;
     }
 
+    /**
+     * Sets complete time.
+     *
+     * @param completeTime the complete time
+     * @throws ParseException the parse exception
+     */
     public void setCompleteTime(String completeTime) throws ParseException {
         this.completeTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(completeTime);
     }
 
+    /**
+     * Gets create time.
+     *
+     * @return the create time
+     */
     public Date getCreateTime() {
         return createTime;
     }
 
+    /**
+     * Sets create time.
+     *
+     * @param createTime the create time
+     * @throws ParseException the parse exception
+     */
     public void setCreateTime(String createTime) throws ParseException {
         this.createTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(createTime);
     }
 
+    /**
+     * Gets currency.
+     *
+     * @return the currency
+     */
     public String getCurrency() {
         return currency;
     }
 
+    /**
+     * Sets currency.
+     *
+     * @param currency the currency
+     */
     public void setCurrency(String currency) {
         this.currency = currency;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Gets modify time.
+     *
+     * @return the modify time
+     */
     public Date getModifyTime() {
         return modifyTime;
     }
 
+    /**
+     * Sets modify time.
+     *
+     * @param modifyTime the modify time
+     * @throws ParseException the parse exception
+     */
     public void setModifyTime(String modifyTime) throws ParseException {
         this.modifyTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(modifyTime);
     }
 
+    /**
+     * Gets pay time.
+     *
+     * @return the pay time
+     */
     public Date getPayTime() {
         return payTime;
     }
 
+    /**
+     * Sets pay time.
+     *
+     * @param payTime the pay time
+     * @throws ParseException the parse exception
+     */
     public void setPayTime(String payTime) throws ParseException {
         this.payTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(payTime);
     }
 
+    /**
+     * Gets receiving time.
+     *
+     * @return the receiving time
+     */
     public Date getReceivingTime() {
         return receivingTime;
     }
 
+    /**
+     * Sets receiving time.
+     *
+     * @param receivingTime the receiving time
+     * @throws ParseException the parse exception
+     */
     public void setReceivingTime(String receivingTime) throws ParseException {
         this.receivingTime = new SimpleDateFormat("yyyyMMddHHmmssSSSZ").parse(receivingTime);
     }
 
+    /**
+     * Gets refund.
+     *
+     * @return the refund
+     */
     public BigDecimal getRefund() {
         return refund;
     }
 
+    /**
+     * Sets refund.
+     *
+     * @param refund the refund
+     */
     public void setRefund(BigDecimal refund) {
         this.refund = refund;
     }
 
+    /**
+     * Gets remark.
+     *
+     * @return the remark
+     */
     public String getRemark() {
         return remark;
     }
 
+    /**
+     * Sets remark.
+     *
+     * @param remark the remark
+     */
     public void setRemark(String remark) {
         this.remark = remark;
     }
 
+    /**
+     * Gets seller id.
+     *
+     * @return the seller id
+     */
     public String getSellerID() {
         return sellerID;
     }
 
+    /**
+     * Sets seller id.
+     *
+     * @param sellerID the seller id
+     */
     public void setSellerID(String sellerID) {
         this.sellerID = sellerID;
     }
 
+    /**
+     * Gets seller memo.
+     *
+     * @return the seller memo
+     */
     public String getSellerMemo() {
         return sellerMemo;
     }
 
+    /**
+     * Sets seller memo.
+     *
+     * @param sellerMemo the seller memo
+     */
     public void setSellerMemo(String sellerMemo) {
         this.sellerMemo = sellerMemo;
     }
 
+    /**
+     * Gets seller sub id.
+     *
+     * @return the seller sub id
+     */
     public Long getSellerSubID() {
         return sellerSubID;
     }
 
+    /**
+     * Sets seller sub id.
+     *
+     * @param sellerSubID the seller sub id
+     */
     public void setSellerSubID(Long sellerSubID) {
         this.sellerSubID = sellerSubID;
     }
 
+    /**
+     * Gets shipping fee.
+     *
+     * @return the shipping fee
+     */
     public BigDecimal getShippingFee() {
         return shippingFee;
     }
 
+    /**
+     * Sets shipping fee.
+     *
+     * @param shippingFee the shipping fee
+     */
     public void setShippingFee(BigDecimal shippingFee) {
         this.shippingFee = shippingFee;
     }
 
+    /**
+     * Gets status.
+     *
+     * @return the status
+     */
     public String getStatus() {
         return status;
     }
 
+    /**
+     * Sets status.
+     *
+     * @param status the status
+     */
     public void setStatus(String status) {
         this.status = status;
     }
 
+    /**
+     * Gets total amount.
+     *
+     * @return the total amount
+     */
     public BigDecimal getTotalAmount() {
         return totalAmount;
     }
 
+    /**
+     * Sets total amount.
+     *
+     * @param totalAmount the total amount
+     */
     public void setTotalAmount(BigDecimal totalAmount) {
         this.totalAmount = totalAmount;
     }
 
+    /**
+     * Gets buyer remark icon.
+     *
+     * @return the buyer remark icon
+     */
     public String getBuyerRemarkIcon() {
         return buyerRemarkIcon;
     }
 
+    /**
+     * Sets buyer remark icon.
+     *
+     * @param buyerRemarkIcon the buyer remark icon
+     */
     public void setBuyerRemarkIcon(String buyerRemarkIcon) {
         this.buyerRemarkIcon = buyerRemarkIcon;
     }
 
+    /**
+     * Gets seller remark icon.
+     *
+     * @return the seller remark icon
+     */
     public String getSellerRemarkIcon() {
         return sellerRemarkIcon;
     }
 
+    /**
+     * Sets seller remark icon.
+     *
+     * @param sellerRemarkIcon the seller remark icon
+     */
     public void setSellerRemarkIcon(String sellerRemarkIcon) {
         this.sellerRemarkIcon = sellerRemarkIcon;
     }
 
+    /**
+     * Gets discount.
+     *
+     * @return the discount
+     */
     public Long getDiscount() {
         return discount;
     }
 
+    /**
+     * Sets discount.
+     *
+     * @param discount the discount
+     */
     public void setDiscount(Long discount) {
         this.discount = discount;
     }
 
+    /**
+     * Gets buyer contact.
+     *
+     * @return the buyer contact
+     */
     public TradeContact getBuyerContact() {
         return buyerContact;
     }
 
+    /**
+     * Sets buyer contact.
+     *
+     * @param buyerContact the buyer contact
+     */
     public void setBuyerContact(TradeContact buyerContact) {
         this.buyerContact = buyerContact;
     }
 
+    /**
+     * Gets seller contact.
+     *
+     * @return the seller contact
+     */
     public TradeContact getSellerContact() {
         return sellerContact;
     }
 
+    /**
+     * Sets seller contact.
+     *
+     * @param sellerContact the seller contact
+     */
     public void setSellerContact(TradeContact sellerContact) {
         this.sellerContact = sellerContact;
     }
 
+    /**
+     * Gets trade type.
+     *
+     * @return the trade type
+     */
     public String getTradeType() {
         return tradeType;
     }
 
+    /**
+     * Sets trade type.
+     *
+     * @param tradeType the trade type
+     */
     public void setTradeType(String tradeType) {
         this.tradeType = tradeType;
     }
 
+    /**
+     * Gets refund status.
+     *
+     * @return the refund status
+     */
     public String getRefundStatus() {
         return refundStatus;
     }
 
+    /**
+     * Sets refund status.
+     *
+     * @param refundStatus the refund status
+     */
     public void setRefundStatus(String refundStatus) {
         this.refundStatus = refundStatus;
     }
 
+    /**
+     * Gets refund status for as.
+     *
+     * @return the refund status for as
+     */
     public String getRefundStatusForAs() {
         return refundStatusForAs;
     }
 
+    /**
+     * Sets refund status for as.
+     *
+     * @param refundStatusForAs the refund status for as
+     */
     public void setRefundStatusForAs(String refundStatusForAs) {
         this.refundStatusForAs = refundStatusForAs;
     }
 
+    /**
+     * Gets refund payment.
+     *
+     * @return the refund payment
+     */
     public Long getRefundPayment() {
         return refundPayment;
     }
 
+    /**
+     * Sets refund payment.
+     *
+     * @param refundPayment the refund payment
+     */
     public void setRefundPayment(Long refundPayment) {
         this.refundPayment = refundPayment;
     }
 
+    /**
+     * Gets id of str.
+     *
+     * @return the id of str
+     */
     public String getIdOfStr() {
         return idOfStr;
     }
 
+    /**
+     * Sets id of str.
+     *
+     * @param idOfStr the id of str
+     */
     public void setIdOfStr(String idOfStr) {
         this.idOfStr = idOfStr;
     }

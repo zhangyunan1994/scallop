@@ -1,6 +1,8 @@
-/**
- * 
+
+/*
+ * Copyright (c) 2018. author and authors.
  */
+
 package com.dormouse.scallop.tool;
 
 import java.lang.reflect.Field;

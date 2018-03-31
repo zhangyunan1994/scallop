@@ -9,12 +9,9 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
+
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/30 下午9:30
- * todo  :
+ * The type Product item info.
  */
 public class ProductItemInfo implements Serializable {
 
@@ -44,9 +41,39 @@ public class ProductItemInfo implements Serializable {
     private Long entryDiscount;//	Long	否	订单明细涨价或降价的金额
     private String specId;//	String	否	订单销售属性ID
 
+    /**
+     * Instantiates a new Product item info.
+     */
     public ProductItemInfo() {
     }
 
+    /**
+     * Instantiates a new Product item info.
+     *
+     * @param cargoNumber        the cargo number
+     * @param description        the description
+     * @param itemAmount         the item amount
+     * @param name               the name
+     * @param price              the price
+     * @param productID          the product id
+     * @param productImgUrl      the product img url
+     * @param productSnapshotUrl the product snapshot url
+     * @param quantity           the quantity
+     * @param refund             the refund
+     * @param skuID              the sku id
+     * @param sort               the sort
+     * @param status             the status
+     * @param subItemID          the sub item id
+     * @param type               the type
+     * @param unit               the unit
+     * @param weight             the weight
+     * @param weightUnit         the weight unit
+     * @param guaranteesTerms    the guarantees terms
+     * @param productCargoNumber the product cargo number
+     * @param skuInfos           the sku infos
+     * @param entryDiscount      the entry discount
+     * @param specId             the spec id
+     */
     public ProductItemInfo(String cargoNumber, String description, BigDecimal itemAmount, String name, BigDecimal price, Long productID, String[] productImgUrl, String productSnapshotUrl, BigDecimal quantity, BigDecimal refund, Long skuID, Integer sort, String status, Long subItemID, String type, String unit, String weight, String weightUnit, List<GuaranteeTermsInfo> guaranteesTerms, String productCargoNumber, List<SkuItemDesc> skuInfos, Long entryDiscount, String specId) {
         this.cargoNumber = cargoNumber;
         this.description = description;
@@ -102,186 +129,416 @@ public class ProductItemInfo implements Serializable {
                 '}';
     }
 
+    /**
+     * Gets cargo number.
+     *
+     * @return the cargo number
+     */
     public String getCargoNumber() {
         return cargoNumber;
     }
 
+    /**
+     * Sets cargo number.
+     *
+     * @param cargoNumber the cargo number
+     */
     public void setCargoNumber(String cargoNumber) {
         this.cargoNumber = cargoNumber;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return the description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets description.
+     *
+     * @param description the description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     * Gets item amount.
+     *
+     * @return the item amount
+     */
     public BigDecimal getItemAmount() {
         return itemAmount;
     }
 
+    /**
+     * Sets item amount.
+     *
+     * @param itemAmount the item amount
+     */
     public void setItemAmount(BigDecimal itemAmount) {
         this.itemAmount = itemAmount;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets price.
+     *
+     * @return the price
+     */
     public BigDecimal getPrice() {
         return price;
     }
 
+    /**
+     * Sets price.
+     *
+     * @param price the price
+     */
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
+    /**
+     * Gets product id.
+     *
+     * @return the product id
+     */
     public Long getProductID() {
         return productID;
     }
 
+    /**
+     * Sets product id.
+     *
+     * @param productID the product id
+     */
     public void setProductID(Long productID) {
         this.productID = productID;
     }
 
+    /**
+     * Get product img url string [ ].
+     *
+     * @return the string [ ]
+     */
     public String[] getProductImgUrl() {
         return productImgUrl;
     }
 
+    /**
+     * Sets product img url.
+     *
+     * @param productImgUrl the product img url
+     */
     public void setProductImgUrl(String[] productImgUrl) {
         this.productImgUrl = productImgUrl;
     }
 
+    /**
+     * Gets product snapshot url.
+     *
+     * @return the product snapshot url
+     */
     public String getProductSnapshotUrl() {
         return productSnapshotUrl;
     }
 
+    /**
+     * Sets product snapshot url.
+     *
+     * @param productSnapshotUrl the product snapshot url
+     */
     public void setProductSnapshotUrl(String productSnapshotUrl) {
         this.productSnapshotUrl = productSnapshotUrl;
     }
 
+    /**
+     * Gets quantity.
+     *
+     * @return the quantity
+     */
     public BigDecimal getQuantity() {
         return quantity;
     }
 
+    /**
+     * Sets quantity.
+     *
+     * @param quantity the quantity
+     */
     public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
     }
 
+    /**
+     * Gets refund.
+     *
+     * @return the refund
+     */
     public BigDecimal getRefund() {
         return refund;
     }
 
+    /**
+     * Sets refund.
+     *
+     * @param refund the refund
+     */
     public void setRefund(BigDecimal refund) {
         this.refund = refund;
     }
 
+    /**
+     * Gets sku id.
+     *
+     * @return the sku id
+     */
     public Long getSkuID() {
         return skuID;
     }
 
+    /**
+     * Sets sku id.
+     *
+     * @param skuID the sku id
+     */
     public void setSkuID(Long skuID) {
         this.skuID = skuID;
     }
 
+    /**
+     * Gets sort.
+     *
+     * @return the sort
+     */
     public Integer getSort() {
         return sort;
     }
 
+    /**
+     * Sets sort.
+     *
+     * @param sort the sort
+     */
     public void setSort(Integer sort) {
         this.sort = sort;
     }
 
+    /**
+     * Gets status.
+     *
+     * @return the status
+     */
     public String getStatus() {
         return status;
     }
 
+    /**
+     * Sets status.
+     *
+     * @param status the status
+     */
     public void setStatus(String status) {
         this.status = status;
     }
 
+    /**
+     * Gets sub item id.
+     *
+     * @return the sub item id
+     */
     public Long getSubItemID() {
         return subItemID;
     }
 
+    /**
+     * Sets sub item id.
+     *
+     * @param subItemID the sub item id
+     */
     public void setSubItemID(Long subItemID) {
         this.subItemID = subItemID;
     }
 
+    /**
+     * Gets type.
+     *
+     * @return the type
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     * Sets type.
+     *
+     * @param type the type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * Gets unit.
+     *
+     * @return the unit
+     */
     public String getUnit() {
         return unit;
     }
 
+    /**
+     * Sets unit.
+     *
+     * @param unit the unit
+     */
     public void setUnit(String unit) {
         this.unit = unit;
     }
 
+    /**
+     * Gets weight.
+     *
+     * @return the weight
+     */
     public String getWeight() {
         return weight;
     }
 
+    /**
+     * Sets weight.
+     *
+     * @param weight the weight
+     */
     public void setWeight(String weight) {
         this.weight = weight;
     }
 
+    /**
+     * Gets weight unit.
+     *
+     * @return the weight unit
+     */
     public String getWeightUnit() {
         return weightUnit;
     }
 
+    /**
+     * Sets weight unit.
+     *
+     * @param weightUnit the weight unit
+     */
     public void setWeightUnit(String weightUnit) {
         this.weightUnit = weightUnit;
     }
 
+    /**
+     * Gets guarantees terms.
+     *
+     * @return the guarantees terms
+     */
     public List<GuaranteeTermsInfo> getGuaranteesTerms() {
         return guaranteesTerms;
     }
 
+    /**
+     * Sets guarantees terms.
+     *
+     * @param guaranteesTerms the guarantees terms
+     */
     public void setGuaranteesTerms(List<GuaranteeTermsInfo> guaranteesTerms) {
         this.guaranteesTerms = guaranteesTerms;
     }
 
+    /**
+     * Gets product cargo number.
+     *
+     * @return the product cargo number
+     */
     public String getProductCargoNumber() {
         return productCargoNumber;
     }
 
+    /**
+     * Sets product cargo number.
+     *
+     * @param productCargoNumber the product cargo number
+     */
     public void setProductCargoNumber(String productCargoNumber) {
         this.productCargoNumber = productCargoNumber;
     }
 
+    /**
+     * Gets sku infos.
+     *
+     * @return the sku infos
+     */
     public List<SkuItemDesc> getSkuInfos() {
         return skuInfos;
     }
 
+    /**
+     * Sets sku infos.
+     *
+     * @param skuInfos the sku infos
+     */
     public void setSkuInfos(List<SkuItemDesc> skuInfos) {
         this.skuInfos = skuInfos;
     }
 
+    /**
+     * Gets entry discount.
+     *
+     * @return the entry discount
+     */
     public Long getEntryDiscount() {
         return entryDiscount;
     }
 
+    /**
+     * Sets entry discount.
+     *
+     * @param entryDiscount the entry discount
+     */
     public void setEntryDiscount(Long entryDiscount) {
         this.entryDiscount = entryDiscount;
     }
 
+    /**
+     * Gets spec id.
+     *
+     * @return the spec id
+     */
     public String getSpecId() {
         return specId;
     }
 
+    /**
+     * Sets spec id.
+     *
+     * @param specId the spec id
+     */
     public void setSpecId(String specId) {
         this.specId = specId;
     }

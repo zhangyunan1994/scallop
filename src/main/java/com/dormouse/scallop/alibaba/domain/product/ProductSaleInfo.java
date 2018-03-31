@@ -8,11 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/29 下午10:12
- * todo  :
+ * The type Product sale info.
  */
 public class ProductSaleInfo implements Serializable {
 
@@ -32,9 +28,29 @@ public class ProductSaleInfo implements Serializable {
     private String sellunit;//	String	否	售卖单位，如果为批量售卖，代表售卖的单位，例如1"手"=12“件"的"手"，国际站无需关注
     private Integer quoteType;    //Integer	否	普通报价-FIXED_PRICE("0"),SKU规格报价-SKU_PRICE("1"),SKU区间报价（商品维度）-SKU_PRICE_RANGE_FOR_OFFER("2"),SKU区间报价（SKU维度）-SKU_PRICE_RANGE("3")，国际站无需关注
 
+    /**
+     * Instantiates a new Product sale info.
+     */
     public ProductSaleInfo() {
     }
 
+    /**
+     * Instantiates a new Product sale info.
+     *
+     * @param supportOnlineTrade the support online trade
+     * @param mixWholeSale       the mix whole sale
+     * @param saleType           the sale type
+     * @param priceAuth          the price auth
+     * @param priceRanges        the price ranges
+     * @param amountOnSale       the amount on sale
+     * @param unit               the unit
+     * @param minOrderQuantity   the min order quantity
+     * @param batchNumber        the batch number
+     * @param retailprice        the retailprice
+     * @param tax                the tax
+     * @param sellunit           the sellunit
+     * @param quoteType          the quote type
+     */
     public ProductSaleInfo(Boolean supportOnlineTrade, Boolean mixWholeSale, String saleType, Boolean priceAuth, List<ProductPriceRange> priceRanges, Double amountOnSale, String unit, Integer minOrderQuantity, Integer batchNumber, Double retailprice, String tax, String sellunit, Integer quoteType) {
         this.supportOnlineTrade = supportOnlineTrade;
         this.mixWholeSale = mixWholeSale;
@@ -70,106 +86,236 @@ public class ProductSaleInfo implements Serializable {
                 '}';
     }
 
+    /**
+     * Gets support online trade.
+     *
+     * @return the support online trade
+     */
     public Boolean getSupportOnlineTrade() {
         return supportOnlineTrade;
     }
 
+    /**
+     * Sets support online trade.
+     *
+     * @param supportOnlineTrade the support online trade
+     */
     public void setSupportOnlineTrade(Boolean supportOnlineTrade) {
         this.supportOnlineTrade = supportOnlineTrade;
     }
 
+    /**
+     * Gets mix whole sale.
+     *
+     * @return the mix whole sale
+     */
     public Boolean getMixWholeSale() {
         return mixWholeSale;
     }
 
+    /**
+     * Sets mix whole sale.
+     *
+     * @param mixWholeSale the mix whole sale
+     */
     public void setMixWholeSale(Boolean mixWholeSale) {
         this.mixWholeSale = mixWholeSale;
     }
 
+    /**
+     * Gets sale type.
+     *
+     * @return the sale type
+     */
     public String getSaleType() {
         return saleType;
     }
 
+    /**
+     * Sets sale type.
+     *
+     * @param saleType the sale type
+     */
     public void setSaleType(String saleType) {
         this.saleType = saleType;
     }
 
+    /**
+     * Gets price auth.
+     *
+     * @return the price auth
+     */
     public Boolean getPriceAuth() {
         return priceAuth;
     }
 
+    /**
+     * Sets price auth.
+     *
+     * @param priceAuth the price auth
+     */
     public void setPriceAuth(Boolean priceAuth) {
         this.priceAuth = priceAuth;
     }
 
+    /**
+     * Gets price ranges.
+     *
+     * @return the price ranges
+     */
     public List<ProductPriceRange> getPriceRanges() {
         return priceRanges;
     }
 
+    /**
+     * Sets price ranges.
+     *
+     * @param priceRanges the price ranges
+     */
     public void setPriceRanges(List<ProductPriceRange> priceRanges) {
         this.priceRanges = priceRanges;
     }
 
+    /**
+     * Gets amount on sale.
+     *
+     * @return the amount on sale
+     */
     public Double getAmountOnSale() {
         return amountOnSale;
     }
 
+    /**
+     * Sets amount on sale.
+     *
+     * @param amountOnSale the amount on sale
+     */
     public void setAmountOnSale(Double amountOnSale) {
         this.amountOnSale = amountOnSale;
     }
 
+    /**
+     * Gets unit.
+     *
+     * @return the unit
+     */
     public String getUnit() {
         return unit;
     }
 
+    /**
+     * Sets unit.
+     *
+     * @param unit the unit
+     */
     public void setUnit(String unit) {
         this.unit = unit;
     }
 
+    /**
+     * Gets min order quantity.
+     *
+     * @return the min order quantity
+     */
     public Integer getMinOrderQuantity() {
         return minOrderQuantity;
     }
 
+    /**
+     * Sets min order quantity.
+     *
+     * @param minOrderQuantity the min order quantity
+     */
     public void setMinOrderQuantity(Integer minOrderQuantity) {
         this.minOrderQuantity = minOrderQuantity;
     }
 
+    /**
+     * Gets batch number.
+     *
+     * @return the batch number
+     */
     public Integer getBatchNumber() {
         return batchNumber;
     }
 
+    /**
+     * Sets batch number.
+     *
+     * @param batchNumber the batch number
+     */
     public void setBatchNumber(Integer batchNumber) {
         this.batchNumber = batchNumber;
     }
 
+    /**
+     * Gets retailprice.
+     *
+     * @return the retailprice
+     */
     public Double getRetailprice() {
         return retailprice;
     }
 
+    /**
+     * Sets retailprice.
+     *
+     * @param retailprice the retailprice
+     */
     public void setRetailprice(Double retailprice) {
         this.retailprice = retailprice;
     }
 
+    /**
+     * Gets tax.
+     *
+     * @return the tax
+     */
     public String getTax() {
         return tax;
     }
 
+    /**
+     * Sets tax.
+     *
+     * @param tax the tax
+     */
     public void setTax(String tax) {
         this.tax = tax;
     }
 
+    /**
+     * Gets sellunit.
+     *
+     * @return the sellunit
+     */
     public String getSellunit() {
         return sellunit;
     }
 
+    /**
+     * Sets sellunit.
+     *
+     * @param sellunit the sellunit
+     */
     public void setSellunit(String sellunit) {
         this.sellunit = sellunit;
     }
 
+    /**
+     * Gets quote type.
+     *
+     * @return the quote type
+     */
     public Integer getQuoteType() {
         return quoteType;
     }
 
+    /**
+     * Sets quote type.
+     *
+     * @param quoteType the quote type
+     */
     public void setQuoteType(Integer quoteType) {
         this.quoteType = quoteType;
     }

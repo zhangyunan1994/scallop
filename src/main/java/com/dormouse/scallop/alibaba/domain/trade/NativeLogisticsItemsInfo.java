@@ -8,11 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * author: 张瑀楠
- * email : zyndev@gmail.com
- * desc  :
- * date  : 2017/8/30 下午9:26
- * todo  :
+ * The type Native logistics items info.
  */
 public class NativeLogisticsItemsInfo implements Serializable {
 
@@ -21,9 +17,18 @@ public class NativeLogisticsItemsInfo implements Serializable {
     private Date deliveredTime;//	java.util.Date	否	发货时间
     private String logisticsCode;//	java.lang.String	否
 
+    /**
+     * Instantiates a new Native logistics items info.
+     */
     public NativeLogisticsItemsInfo() {
     }
 
+    /**
+     * Instantiates a new Native logistics items info.
+     *
+     * @param deliveredTime the delivered time
+     * @param logisticsCode the logistics code
+     */
     public NativeLogisticsItemsInfo(Date deliveredTime, String logisticsCode) {
         this.deliveredTime = deliveredTime;
         this.logisticsCode = logisticsCode;
@@ -37,18 +42,38 @@ public class NativeLogisticsItemsInfo implements Serializable {
                 '}';
     }
 
+    /**
+     * Gets delivered time.
+     *
+     * @return the delivered time
+     */
     public Date getDeliveredTime() {
         return deliveredTime;
     }
 
+    /**
+     * Sets delivered time.
+     *
+     * @param deliveredTime the delivered time
+     */
     public void setDeliveredTime(Date deliveredTime) {
         this.deliveredTime = deliveredTime;
     }
 
+    /**
+     * Gets logistics code.
+     *
+     * @return the logistics code
+     */
     public String getLogisticsCode() {
         return logisticsCode;
     }
 
+    /**
+     * Sets logistics code.
+     *
+     * @param logisticsCode the logistics code
+     */
     public void setLogisticsCode(String logisticsCode) {
         this.logisticsCode = logisticsCode;
     }
