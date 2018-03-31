@@ -2,13 +2,14 @@
  * Copyright (c) 2018. author and authors.
  */
 
-package com.dormouse.scallop.alibaba.constant;
+package com.dormouse.scallop.pinduoduo.constant;
 
 /**
- * @author 张瑀楠
- * @version 0.0.1
+ * @author 张瑀楠 zyndev@gmail.com
+ * @version 1.0.0
+ * 2018/3/31 上午11:05
  */
-public interface AliConstant {
+public interface PddConstant {
 
     /**
      * 阿里api根路径
@@ -17,12 +18,15 @@ public interface AliConstant {
 
     String API_PROTOCOL = "param2/1/";
 
-    /**
-     * 阿里webSite
-     */
-    public static String WEBSITE="1688";
+    interface Order {
+        String INFORMATION_GET = "pdd.order.information.get"; //（订单详情）
+        String LIST_GET = "pdd.order.list.get"; // （订单列表查询接口（根据成团时间)
+        String NUMBER_LIST_GET = "pdd.order.number.list.get"; //（订单全量列表）
+        String NUMBER_LIST_INCREMENT_GET = "pdd.order.number.list.increment.get"; //（订单全量列表）
+        String STATUS_GET = "pdd.order.status.get"; //（订单全量列表）
+    }
 
-    interface Product {
+    interface Goods {
         String NAMESPACE = "com.alibaba.product/";
         String PRODUCT_GETLIST = "alibaba.product.getList/"; // 获取商品列表（new）
         String PRODUCT_GET = "alibaba.product.get/"; //由商品ID获取商品详细信息（new）
@@ -39,32 +43,5 @@ public interface AliConstant {
         String SELLER_LOGISTICS_INFOS = "alibaba.trade.getLogisticsInfos.sellerView"; // 获取卖家的订单的物流详情
         String SELLER_LOGISTICS_TRACEINFO = "alibaba.trade.getLogisticsTraceInfo.sellerView"; //获取卖家的订单的物流跟踪信息。
         String SEND_ADDRESS_LIST = "alibaba.logistics.mySendGoodsAddress.list.get"; //我的发货地址列表
-    }
-
-    /**
-     * 阿里巴巴常量
-     */
-    interface Alibaba {
-        //namespace: com.alibaba.product
-        //类目
-        String CATEGORY_ATTRIBUTE = "alibaba.category.attribute.get"; //获取类目属性
-        String CATEGORY_LIST = "alibaba.category.get"; //查询类目
-
-        //产品（new）
-
-
-        //产品（old）
-        //namespace: cn.alibaba.open
-        String PRODUCT_GETLIST_OLD = "offer.getAllOfferList";  //获取当前会员的商品列表（old），不建议使用。
-        String PRODUCT_GET_OLD = "offer.get"; //获取单个商品（old），不建议使用。
-
-        String SHOWWINDOW_LIST = "industry.showwindow.doQueryRecommOfferList"; //获取卖家当前的橱窗列表
-        String SHOWWINDOW_DORECOMMEND = "industry.showwindow.doRecommendOffer"; //推荐一个产品为橱窗产品
-        String SHOWWINDOW_CANCEL = "industry.showwindow.cancelRecommendOffer"; //取消一个橱窗推荐产品
-
-
-        //物流（new）
-
-
     }
 }
