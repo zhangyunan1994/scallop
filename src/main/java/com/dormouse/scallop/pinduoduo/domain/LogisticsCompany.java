@@ -14,6 +14,6 @@ import lombok.Data;
 public class LogisticsCompany {
 
     private String id;
-    private String logisticsCompany;
+    private String company;
 
 }

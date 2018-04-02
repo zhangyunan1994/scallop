@@ -23,7 +23,7 @@ public class OrderStatus {
     /**
      * 发货状态 1：待发货，2：已发货待签收，3：已签收 0：异常
      */
-    private Integer orderStatus;
+    private Integer status;
 
     /**
      * 售后状态 1：无售后或售后关闭，2：售后处理中，3：退款中，4：退款成功 0：异常
