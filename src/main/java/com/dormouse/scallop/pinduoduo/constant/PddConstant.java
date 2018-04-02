@@ -15,7 +15,7 @@ public interface PddConstant {
     /**
      * 阿里api根路径
      */
-    String API_DOMAIN = "https://gw.open.1688.com/openapi/";
+    String API_DOMAIN = "http://gw-api.pinduoduo.com/api/router/";
 
     /**
      * The constant API_PROTOCOL.
