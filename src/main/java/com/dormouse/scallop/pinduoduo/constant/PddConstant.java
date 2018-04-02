@@ -166,7 +166,48 @@ public interface PddConstant {
          */
         String PDD_GOODS_SALE_STATUS_SET = "pdd.goods.sale.status.set";
 
+    }
 
+    interface AD {
+        String PDD_AD_CHART_BYKEYWORD_GET = "pdd.ad.chart.bykeyword.get";
+    }
+
+    interface Ddk {
+        /**
+         * 多多进宝商品详情查询
+         * 查询多多进宝商品详情，仅限白名单第三方推广者使用
+         */
+        String PDD_DDK_GOODS_DETAIL = "pdd.ddk.goods.detail";
+        /**
+         * 多多进宝商品查询
+         * 查询多多进宝商品，仅限白名单第三方推广者使用
+         */
+        String PDD_DDK_GOODS_SEARCH = "pdd.ddk.goods.search";
+        /**
+         * 查询已经生成的推广位信息
+         * 查询已经生成的推广位信息
+         */
+        String PDD_DDK_GOODS_PID_QUERY = "pdd.ddk.goods.pid.query";
+        /**
+         * 创建多多进宝推广位
+         * 创建多多进宝推广位，只对白名单推广者开放
+         */
+        String PDD_DDK_GOODS_PID_GENERATE = "pdd.ddk.goods.pid.generate";
+        /**
+         * 多多进宝推广链接生成
+         * 生成普通商品推广链接，只对白名单推广者开放
+         */
+        String PDD_DDK_GOODS_PROMOTION_URL_GENERATE = "pdd.ddk.goods.promotion.url.generate";
+        /**
+         * 按天查询推广订单接口
+         * 按天获取推广订单信息，只对白名单推广者开放
+         */
+        String PDD_DDK_ORDER_LIST_GET = "pdd.ddk.order.list.get";
+        /**
+         * 用时间段查询推广订单接口
+         * 按照时间段获取推广订单信息，只对白名单推广者开放
+         */
+        String PDD_DDK_ORDER_LIST_RANGE_GET = "pdd.ddk.order.list.range.get";
     }
 
 }
