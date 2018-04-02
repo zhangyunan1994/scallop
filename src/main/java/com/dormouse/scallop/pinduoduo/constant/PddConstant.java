@@ -13,7 +13,7 @@ package com.dormouse.scallop.pinduoduo.constant;
 public interface PddConstant {
 
     /**
-     * 阿里api根路径
+     * 拼多多api根路径
      */
     String API_DOMAIN = "http://gw-api.pinduoduo.com/api/router/";
 
@@ -51,6 +51,25 @@ public interface PddConstant {
          * （订单全量列表）
          */
         String STATUS_GET = "pdd.order.status.get";
+    }
+
+    interface Refund {
+        String STATUS_CHECK = "pdd.refund.status.check";
+    }
+
+    interface Logistics {
+        /**
+         * （获取拼多多标准国家地址库）
+         */
+        String ADDRESS_GET = "pdd.logistics.address.get";
+        /**
+         * （快递公司查看接口）
+         */
+        String COMPANIES_GET = "pdd.logistics.companies.get";
+        /**
+         * （订单发货通知接口）
+         */
+        String ONLINE_SEND = "pdd.logistics.online.send";
     }
 
 }

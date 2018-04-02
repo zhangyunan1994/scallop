@@ -6,6 +6,7 @@ package com.dormouse.scallop.pinduoduo.api;
 
 import com.dormouse.scallop.pinduoduo.domain.ApplicationParam;
 import com.dormouse.scallop.pinduoduo.domain.OrderInformation;
+import com.dormouse.scallop.pinduoduo.domain.OrderStatus;
 
 import java.util.List;
 
@@ -66,7 +67,7 @@ public class OrderApi {
      *
      * @return the order status
      */
-    public List<OrderInformation> getOrderStatus() {
+    public List<OrderStatus> getOrderStatus(ApplicationParam applicationParam, String accessToken, String... orderSn) {
         return null;
     }
 }
