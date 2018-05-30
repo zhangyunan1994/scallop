@@ -23,6 +23,10 @@
             <name>张瑀楠</name>
             <email>zyndev@gmail.com</email>
         </developer>
+
+        <developer>
+            <name>苏豪岩</name>
+        </developer>
     </developers>
 
     <dependencies>
